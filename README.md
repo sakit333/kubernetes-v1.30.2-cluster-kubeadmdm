@@ -328,7 +328,7 @@ sudo apt-get install -y kubelet kubeadm kubectl
 sudo apt-mark hold kubelet kubeadm kubectl
 ```
 
-### Step 10: Initialize the Cluster and Install CNI
+### Step 10: Initialize the Cluster and Install CNI In the master node
 ```bash
 sudo kubeadm config images pull
 sudo kubeadm init
