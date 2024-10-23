@@ -133,3 +133,7 @@ sudo apt-mark hold kubelet kubeadm kubectl
 # sudo kubeadm init
 # kubectl apply -f https://reweave.azurewebsites.net/k8s/v1.30/net.yaml
 # its wokring as shell file to execute in the shell
+echo "In master node"
+echo "sudo kubeadm config images pull"
+echo "kubectl apply -f https://reweave.azurewebsites.net/k8s/v1.30/net.yaml"
+echo "execute these lines only in master node"
