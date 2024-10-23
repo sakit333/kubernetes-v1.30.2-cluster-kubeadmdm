@@ -132,3 +132,4 @@ sudo apt-mark hold kubelet kubeadm kubectl
 # sudo kubeadm config images pull
 # sudo kubeadm init
 # kubectl apply -f https://reweave.azurewebsites.net/k8s/v1.30/net.yaml
+# its wokring as shell file to execute in the shell
