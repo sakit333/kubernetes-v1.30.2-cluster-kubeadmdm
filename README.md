@@ -1,11 +1,11 @@
-# Kubernetes 1.30.2 Cluster Setup on Ubuntu 22.04 LTS
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/2XlI9qqed04/0.jpg)](https://www.youtube.com/watch?v=2XlI9qqed04)
+# Kubernetes 1.30 Cluster Setup on Ubuntu 24.04 LTS
+<!-- [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/2XlI9qqed04/0.jpg)](https://www.youtube.com/watch?v=2XlI9qqed04) -->
 
-This guide provides step-by-step instructions to set up a Kubernetes 1.30.2 cluster on Ubuntu 22.04 LTS.
+This guide provides step-by-step instructions to set up a Kubernetes 1.30 cluster on Ubuntu 24.04 LTS.
 
 ## Prerequisites
 
-- Ubuntu 22.04 LTS installed on all nodes.
+- Ubuntu 24.04 LTS installed on all nodes.
 - Access to the internet.
 - User with `sudo` privileges.
 - Instance type --> t2.medium
@@ -333,19 +333,8 @@ sudo apt-mark hold kubelet kubeadm kubectl
 sudo kubeadm config images pull
 sudo kubeadm init
 ```
-#### After Initialzing the Cluster Connect to it and apply the CNI yaml in Master node
+#### apply the CNI yaml in Master node
 
-```bash
-#To start using your cluster, you need to run the following as a regular user:
-
-mkdir -p $HOME/.kube
-sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-sudo chown $(id -u):$(id -g) $HOME/.kube/config
-
-#Alternatively, if you are the root user, you can run:
-
-export KUBECONFIG=/etc/kubernetes/admin.conf
-```
 ```bash
 #Apply the CNI YAML
 kubectl apply -f https://reweave.azurewebsites.net/k8s/v1.30/net.yaml
